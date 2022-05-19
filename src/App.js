@@ -1,9 +1,11 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 
-import Familia from './components/Relacao/Familia'
-import Membro from './components/Relacao/Membro'
 
+
+import UsuarioLogado from './components/UsuarioLogado'
+//import Familia from './components/Relacao/Familia'
+//import Membro from './components/Relacao/Membro'
 //import Parimpar from './components/Parimpar'
 //import Diferenciar from './components/Diferenciar' 
 //import ContadorV2 from './components/Contador/ContadorV2';
@@ -21,7 +23,16 @@ import Membro from './components/Relacao/Membro'
 
 export default () => (
     <SafeAreaView style={style.App}>
-        <Familia>
+       <UsuarioLogado usuario={   {nome: 'Gui', email: 'gui@email.com'}    }/> 
+       <UsuarioLogado usuario={   {email: 'jorge@email.com'}    }/> 
+
+        
+    
+      
+  
+       
+        {/*
+                <Familia>
             <Membro nome="Bia" sobrenome="Arruda" />
             <Membro nome="Carlos" sobrenome="Arruda" />
         </Familia>
@@ -31,20 +42,18 @@ export default () => (
             <Membro nome="Gui" sobrenome="Silva" />
             <Membro nome="Rebeca" sobrenome="Silva" />
         </Familia>
-        
-    
-      
-  
-       
-        {/*
+
         <Parimpar num={3}/>
           <Diferenciar/>
         <ContadorV2 />
+
         <Pai/>
          <Pai/>
+
          <Contador inicial={100} passo={13} />
         <Contador />
         <Botao />
+
         <Titulo principal="Cadastro Produto"
             secundario="Tela de Cadastro do Produto" />
         <Aleatorio min={1} max={60} />
