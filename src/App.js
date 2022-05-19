@@ -1,11 +1,13 @@
 import React from 'react'
-import {  StyleSheet, SafeAreaView } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 
-import Parimpar from './components/Parimpar'
+import Familia from './components/Relacao/Familia'
+import Membro from './components/Relacao/Membro'
 
+//import Parimpar from './components/Parimpar'
 //import Diferenciar from './components/Diferenciar' 
 //import ContadorV2 from './components/Contador/ContadorV2';
-//import Pai from './components/indireta/Pai'
+//import Familia from './components/indireta/Pai'
 //import Pai from './components/direta/Pai'
 //import Contador from './components/Contador'
 // import Botao from './components/Botao'
@@ -15,14 +17,27 @@ import Parimpar from './components/Parimpar'
 // import CompPadrao, { Comp1, Comp2 } from './components/Multi'
 // import Primeiro from './components/Primeiro'
 
+/* componente dentro do outro */
 
 export default () => (
     <SafeAreaView style={style.App}>
-    <Parimpar num={3}/>
+        <Familia>
+            <Membro nome="Bia" sobrenome="Arruda" />
+            <Membro nome="Carlos" sobrenome="Arruda" />
+        </Familia>
+        <Familia>
+            <Membro nome="Ana" sobrenome="Silva" />
+            <Membro nome="Julia" sobrenome="Silva" />
+            <Membro nome="Gui" sobrenome="Silva" />
+            <Membro nome="Rebeca" sobrenome="Silva" />
+        </Familia>
+        
+    
       
   
        
         {/*
+        <Parimpar num={3}/>
           <Diferenciar/>
         <ContadorV2 />
         <Pai/>
